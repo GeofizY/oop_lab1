@@ -1,0 +1,36 @@
+li {
+    list-style-type: none;
+}
+
+.category {
+    background: linear-gradient(113deg, #0019FF -10.53%, #0FF 102.1%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration-line: underline;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .subcategoryList {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: #000;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 20px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: normal;
+
+        .subcategory {
+            text-decoration-line: none;
+        }
+    }
+}
