@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mUsic", "mUsic\mUsic.csproj", "{4A387BDE-C715-4CBB-AD18-93B6B89C79FE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{320EB9EB-A9B0-40D7-AB40-7ABC00B425B5} = {320EB9EB-A9B0-40D7-AB40-7ABC00B425B5}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A387BDE-C715-4CBB-AD18-93B6B89C79FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A387BDE-C715-4CBB-AD18-93B6B89C79FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A387BDE-C715-4CBB-AD18-93B6B89C79FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A387BDE-C715-4CBB-AD18-93B6B89C79FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
