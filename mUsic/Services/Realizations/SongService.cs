@@ -27,19 +27,28 @@ public class SongService : ISongService
             .ToList<SongView>();
     }
     
-    // var albums = _dbContext.Albums
-    //     .Include(a => a.Songs)
-    //     .Where(a => a.AuthorId == author.Id);
-    //
-    // List<SongView> songs = new List<SongView>();
-    //
-    // foreach (var album in albums)
+    public List<SongView> GetSongsByAuthor(string authorName)
+    {
+        var songs = _dbContext.Songs
+            .Include(x => x.Album)
+            .ThenInclude(x => x!.Author)
+            .Where(x => x.Album.Author.Name.ToLower() == authorName.Trim().ToLower())
+            .Select(x => new SongView(x))
+            .ToList<SongView>();
+
+        return songs;
+    }
+
+    // public List<SongView> GetSongsByCategory(string subCategoryName)
     // {
-    //     foreach (var song in album.Songs)
-    //     {
-    //         songs.Add(new SongView(song));
-    //     }
-    // }
+    //     var songs = _dbContext.Songs
+    //         .Include(x => x.SubCategories)
+    //         .Where(x => x.SubCategories == subCategoryName)
+    //         .Select(x => new SongView(x))
+    //         .ToList<SongView>();
     //
-    // return songs;
+    //     return songs;
+    // }
+    
+    
 }

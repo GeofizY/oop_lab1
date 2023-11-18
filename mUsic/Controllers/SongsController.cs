@@ -22,12 +22,7 @@ public class SongsController : ControllerBase
    {
       return _songService.GetSongs();
    }
-
-   // [HttpGet("{authorName}")]
-   // public IEnumerable<SongView> Get([FromRoute]string authorName)
-   // {
-   //    return _songService.GetSongs(authorName);
-   // }
+   
    
    [HttpGet("{songName}")]
    public IEnumerable<SongView> Get([FromRoute]string songName)
@@ -35,5 +30,10 @@ public class SongsController : ControllerBase
       return _songService.GetSongs(songName);
    }
 
+   [HttpGet("[action]/{authorName}")]
+   public IEnumerable<SongView> GetByAuthorName([FromRoute]string authorName)
+   {
+      return _songService.GetSongsByAuthor(authorName);
+   }
    
 }

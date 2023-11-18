@@ -14,6 +14,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<MusicDbContext>(x => x.UseNpgsql(builder.Configuration.GetConnectionString("Postgres")));
 
 builder.Services.AddScoped<ISongService, SongService>();
+builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
+// builder.Services.AddScoped<IAuthorService, AuthorService>();
+// builder.Services.AddScoped<IAlbumService, AlbumService>();
+// builder.Services.AddScoped<ICollectionervice, CollectionService>();
 
 var app = builder.Build();
 

@@ -41,14 +41,14 @@ export class Home extends Component {
                                 maxLength='100'
                                 className='searchText'
                             />
-                            <div className='searchButton'>
+                            <button className='searchButton'>
                                 <div className='dividingLine'> </div>{" "}
                                 <img
                                     src='./icons/Search_Zoom.svg'
                                     alt='search'
                                     className='header_search_zoom'
                                 />
-                            </div>{" "}
+                            </button>{" "}
                         </div>{" "}
                         <ul className='musicList'>
                             <Music
