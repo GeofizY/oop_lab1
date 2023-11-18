@@ -15,9 +15,8 @@ builder.Services.AddDbContext<MusicDbContext>(x => x.UseNpgsql(builder.Configura
 
 builder.Services.AddScoped<ISongService, SongService>();
 builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
-// builder.Services.AddScoped<IAuthorService, AuthorService>();
-// builder.Services.AddScoped<IAlbumService, AlbumService>();
-// builder.Services.AddScoped<ICollectionervice, CollectionService>();
+builder.Services.AddScoped<IAlbumService, AlbumService>();
+builder.Services.AddScoped<ICollectionService, CollectionService>();
 
 var app = builder.Build();
 

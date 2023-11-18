@@ -36,4 +36,10 @@ public class SongsController : ControllerBase
       return _songService.GetSongsByAuthor(authorName);
    }
    
+   [HttpGet("[action]/{albumName}")]
+   public IEnumerable<SongView> GetByAlbumName([FromRoute]string albumName)
+   {
+      return _songService.GetSongsByAlbum(albumName);
+   }
+   
 }

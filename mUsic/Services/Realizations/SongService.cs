@@ -39,6 +39,17 @@ public class SongService : ISongService
         return songs;
     }
 
+    public List<SongView> GetSongsByAlbum(string albumName)
+    {
+        var songs = _dbContext.Songs
+            .Include(x => x.Album)
+            .Where(x => x.Album.Name.ToLower() == albumName.Trim().ToLower())
+            .Select(x => new SongView(x))
+            .ToList<SongView>();
+        
+        return songs;
+    }
+
     // public List<SongView> GetSongsByCategory(string subCategoryName)
     // {
     //     var songs = _dbContext.Songs
