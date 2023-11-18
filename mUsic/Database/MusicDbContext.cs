@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Models;
 
-namespace Database;
+namespace mUsic.Database;
 
 public class MusicDbContext : DbContext
 {
@@ -17,8 +17,8 @@ public class MusicDbContext : DbContext
 
     public DbSet<Collection> Collections { get; set; } = null!;
     public DbSet<Song> Songs { get; set; } = null!;
-    public DbSet<Album> Albums { get; set; } = null!;
     public DbSet<Author> Authors { get; set; } = null!;
+    public DbSet<Album> Albums { get; set; } = null!;
     public DbSet<Category> Categories { get; set; } = null!;
     public DbSet<SubCategory> SubCategories { get; set; } = null!;
 
