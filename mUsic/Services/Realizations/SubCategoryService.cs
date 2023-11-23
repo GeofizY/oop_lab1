@@ -16,7 +16,7 @@ public class SubCategoryService : ISubCategoryService
     public List<SongView> GetSongBySubCategory(string subCategoryName)
     {
         var subCategory = _dbContext.SubCategories.Include(subCategory => subCategory.Songs)
-            .FirstOrDefault(x => x.Name == subCategoryName);
+            .FirstOrDefault(x => x.Name.ToLower() == subCategoryName.Trim().ToLower());
 
         if (subCategory == null)
         {
