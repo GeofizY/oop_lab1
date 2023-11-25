@@ -13,7 +13,7 @@ body {
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color: black;
 }
 
 code {
@@ -136,19 +136,25 @@ code {
                 >.searchButton {
                     display: flex;
                     align-items: center;
+                    border: none;
+                    background-color: transparent;
+
+                    &:hover .header_search_zoom {
+                        opacity: 1;
+                    }
 
                     >.dividingLine {
                         width: 2px;
                         height: 36px;
-                        border-radius: 5px;
+                        border-radius: 10px;
                         background: black;
                         margin-right: 10px;
-                        opacity: 0.3;
                     }
 
                     >.header_search_zoom {
                         width: 30px;
                         height: 30px;
+                        opacity: 0.3;
                     }
                 }
             }
