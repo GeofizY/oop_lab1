@@ -8,7 +8,6 @@ const target = env.ASPNETCORE_HTTPS_PORT
     : "http://localhost:12210"
 
 const context = [
-    "/weatherforecast",
     "/api/songs",
     "/api/albums",
     "/api/collections",

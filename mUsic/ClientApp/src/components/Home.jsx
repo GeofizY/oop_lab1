@@ -19,6 +19,13 @@ const Home = () => {
         return []
     }
 
+    // const getGenres = async () => {
+    //     const options = {
+    //         method: 'GET'
+    //     }
+    //     const result = await fetch(`/api/genres`)
+    // }
+
     useEffect(() => {
         getSongs()
     }, [])

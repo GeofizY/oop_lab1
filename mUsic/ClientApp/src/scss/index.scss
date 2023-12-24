@@ -1,4 +1,4 @@
-@import "./scss/reset.scss";
+@import "./reset.scss";
 
 *,
 *::before,
@@ -21,7 +21,7 @@ code {
 }
 
 .bg {
-    background-image: url(.\img\background.jpg);
+    background-image: url(..\img\background.jpg);
     background-repeat: no-repeat;
     background-position: top;
     background-size: contain;
